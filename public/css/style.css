@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    --yellow : #EAC926;
+    --blue : #03264C ;
+    --lightBlue : #1259c3 ;
+    --DarkGrey : #666 ;
+    --lightGrey : #ebebeb;
+    --green : #39b54a ;
+    /*fonts*/
+    --font-primary :'Roboto', sans-serif;
+    /*font size*/
+    --paragraph : 12px;
+    --title : 24px;
+    --prices : 18px;
+    --descriptions : 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-primary);
+}
+
+body{
+    background-color: var(--lightGrey);
+}
+
+header{
+    background-color: var(--yellow);
+    padding: 30px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;    
+}
+
+header img{
+    width: 40%;
+    margin: 0 10px 0 0;
+    padding: 0;
+    display: inline;
+}
+
+ #search{
+    width: 40%;
+    height: 40px;
+    border-radius: 5px 0 0 5px;
+    border: none;
+    font-size: 15px;
+    padding-left: 10px;
+    display: inline;
+    margin: 0;
+}
+ #fa-search{
+    background-color: white;
+    padding: 12px 5px;
+    border-radius: 0 5px 5px 0;
+    color: var(--DarkGrey);
+    margin: 0;
+   
+}
+header p {
+    font-size: 10px;
+    margin: 20px 10%;
+    width: 100%;
+    text-align: center;
+}
+header nav ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+header .burger-menu i{
+    background-color: var(--lightBlue);
+    color: white;
+    font-size: 25px;
+    padding: 11px 13px;
+    border-radius: 5px;
+}
+
+header .burger-menu{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+nav{
+    display: none;
+}
+
+main{
+    width: 100%;
+}
+
+main section{
+    margin: 0;
+    padding: 0;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.card{
+    max-height: 450px;
+    max-width: 100x;
+   
+    margin: 10px auto;
+    padding: 0;
+    border-top: 1px solid #ebebeb;
+    background-color: white;
+    position: relative;
+    transition: 1s;
+}
+
+.card:hover{
+    box-shadow:0px 0px 10px rgb(100, 100, 100); 
+
+}
+
+.card img{
+    width: 300px;
+}
+
+.card .card-content {
+    border-top: 1px solid var(--lightGrey); 
+    padding: 20px;
+    position: relative;
+}
+
+.card .card-content h6 {
+    display: none;
+}
+
+.card .card-content .icon-truck {
+    border-radius: 50%;
+    padding: 10px;
+    width: fit-content;
+}
+
+.card .card-content .icon-truck i {
+    color: var(--green);
+    transition: 1s;
+}
+
+.card .card-content .icon-truck i:hover {
+    transform: rotate(90deg);
+}
+
+
+.card i{
+    color: var(--green);
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--green);
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    bottom: 75px;
+}
+.card hr{
+    border: 1px solid rgb(243, 243, 243);
+    width: 100%;
+}
+.card p{
+    margin: 5px 5px 5px 5px;
+    font-size: 18px;
+    font-weight: 501;
+    display: inline-block;
+}
+.descuento{
+    color: var(--green);
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+h4{
+    color: var(--DarkGrey);
+}
+
+footer{
+    padding-top: 40px;
+    padding-bottom: 15px;
+    text-align: center;
+    background-color: white;
+    font-family: var(--font-primary);
+}
+
+footer .copy{
+    color: var(--DarkGrey);
+    font-size: var(--paragraph);
+    text-align: left;
+    padding-left: 15px;
+}
+
+footer i{
+    font-size:2em;
+    color: var(--lightBlue);
+    margin-bottom: 10px;
+    transition: 1s;
+}
+
+footer i:hover{  
+    color: var(--blue);
+}
+
+footer p {
+    font-size: var(--paragraph);
+    padding: 0px 30px 30px 30px;
+}
+
+footer h5{
+    font-size: var(--descriptions);
+}
+
+@media  (min-width: 576px){
+
+    header img{
+        margin: 0;
+        padding: 0;
+        margin-right: 10px;
+        text-align: left;
+        width: 30%;
+    }
+    #search{
+        margin: 0;
+        width: 23%;
+    }
+    header p{
+        padding: 0;
+        margin: 0;
+        width: 40%;
+        font-size: 10px;
+        text-align: right;
+    }
+    header nav {
+        margin-top: 40px;
+        font-size: 12px;
+        width: 100%;
+        display: inline-flex;
+    }
+    header nav ul li{
+        font-size: 11px;
+        margin-right: 10px;
+    }    
+    header .burger-menu{
+        display: none;
+    }
+    header nav ul{
+        list-style: none;
+        display: flex;
+    }
+    nav{
+        display: flex;
+        justify-content: space-between;
+    }
+    main h4{
+        text-align: start;
+        margin: 15px 5%;
+    }
+    main section {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .card img{
+        width: 200px;
+    }
+    .card{
+        max-width: 200px;
+        margin: 10px 20px;
+    }
+
+    .card .descuento{
+        font-size: 11px;
+    }
+    .card .card-content h6 {
+        display: none;
+        color: var(--DarkGrey);
+        font: var(--font-primary);
+       
+       
+    }
+    .card .card-content:hover h6{
+        display: block;    
+    }
+
+    .card .card-content {
+        border-top: 1px solid var(--lightGrey); 
+        padding: 10px;
+        position: relative;
+    }
+
+    .card i{
+        right: 10px;
+        font-size: 15px;
+    }
+
+
+} 
+
+@media (min-width: 1080px){
+    
+    header nav ul li{
+        font-size: 15px;
+        margin-right: 40px;
+    }
+    header #search{
+        width: 26%;
+    }
+     h4{
+        margin-left: 45px;
+    }
+    header p{
+        font-size: 15px;
+    }
+
+    .modo-de-pago{
+        display: inline-flex;
+    }
+
+}
